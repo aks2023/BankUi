@@ -1,0 +1,39 @@
+﻿@model BEntity.EmployeeEntity
+@{
+    ViewBag.Title = "EmployeeRegistration";
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+}
+
+<div id="h">
+
+    <h1 style="font-weight:bold"> Register Employee</h1>
+</div>
+<div class="container h-80">
+    <div class="row align-items-center h-100">
+        <div class="col-3 mx-auto">
+            <div class="text-center">
+
+                <p id="profile-name" class="profile-name-card"></p>
+                <div id="h">
+                    <form method="post">
+
+                        <input type="text" name="EmpName" class="form-control form-group" placeholder="Enter EmployeeName" required autofocus>
+                        @Html.ValidationMessageFor(s => s.EmpName)
+                        <input type="text" name="Pwd" class="form-control form-group" placeholder="Password" required autofocus>
+                        @Html.ValidationMessageFor(s => s.Pwd)
+                        <input type="text" name="DepName" class="form-control form-group" placeholder="DepartmentID" required autofocus>
+                        <input type="text" name="Pan" class="form-control form-group" placeholder="Pancard" required autofocus>
+                        @Html.ValidationMessageFor(s => s.Pan)
+
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
+                    </form>
+                    <b id="h"> @ViewData["status"]</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </di
+
+

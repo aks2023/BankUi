@@ -1,0 +1,59 @@
+﻿@model BEntity.LoanTransactionEntity
+@{
+    ViewBag.Title = "Payemi";
+ 
+}
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link href="~/content/login.css" rel="stylesheet" type="text/css" />
+<div id="h">
+    <h1>Pay Emi</h1>
+
+</div>
+
+
+<div class="container h-80">
+    <div class="row align-items-center h-100">
+        <div class="col-3 mx-auto">
+            <div class="text-center">
+
+                <p id="profile-name" class="profile-name-card"></p>
+                <div>
+                    <form method="post">
+                        <input type="text" name="lacid" class="form-control form-group" placeholder="Enter LoanAccountId" required autofocus>
+                        <input type="text" name="Amount" class="form-control form-group" placeholder="Amount" required autofocus>
+
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Pay Emi</button>
+
+
+
+                        <b id="h"> @ViewData["status"]</b>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="h">
+    <div class="text-center">
+        <h2>Close Your Account Here</h2>
+        <form method="post">
+
+            <label>Enter LoanAc Id</label>
+            <input type="text" name="lacid" placeholder="Enter LoanAcId" /><br />
+            <label>Amount</label>
+            @Html.TextBoxFor(c => c.Amount, new { @placeholder = "Amount" })<br />
+
+            <input type="submit" value="Pay" />
+        </form>
+        @ViewData["status"]
+    </div>
+</div>
+
+

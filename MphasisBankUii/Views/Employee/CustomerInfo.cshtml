@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "CustomerInfo";
+    Layout = "~/Views/Shared/CustomerMasterPage.cshtml";
+}
+
+
+<div id="h">
+    <h1 style="font-weight:bold">Search ID</h1>
+    <div class="container h-80">
+        <div class="row align-items-center h-100">
+            <div class="col-3 mx-auto">
+                <div class="text-center">
+                    <p id="profile-name" class="profile-name-card"></p>
+                    <div>
+                        <div id="h">
+                            <form method="post">
+                                <input type="text" name="hello" id="uname" class="form-control form-group" placeholder="Enter CustomerId" required autofocus>
+                                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Search</button>
+                            </form>
+                        </div>
+                        <b> @ViewData["a"]</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

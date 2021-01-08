@@ -1,0 +1,42 @@
+﻿@model BEntity.LoanAccountEntity
+@{
+    ViewBag.Title = "Loanaccount";
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+}
+
+
+
+
+
+
+<div id="h">
+
+    <h1 style="font-weight:bold"> Create Loan Account</h1>
+</div>
+<div class="container h-80">
+    <div class="row align-items-center h-100">
+        <div class="col-3 mx-auto">
+            <div class="text-center">
+
+                <p id="profile-name" class="profile-name-card"></p>
+                <div id="h">
+                    <form method="post">
+                        <input type="text" name="Custid" class="form-control form-group" placeholder="Enter CustomerID" required autofocus>
+                        <input type="text" name="LoanAmount" class="form-control form-group" placeholder="Enter LoanAmount" required autofocus>
+
+                        <input type="text" name="Salary" class="form-control form-group" placeholder="Salary" required autofocus>
+                        <label>Tenure</label> @Html.DropDownList("tenure", new List<SelectListItem> { new SelectListItem { Text = "1", Value = "1" }, new SelectListItem
+{ Text = "2", Value = "2" }, new SelectListItem { Text = "3", Value = "3" }, new SelectListItem { Text = "4", Value = "4" },
+new SelectListItem { Text = "5", Value = "5" }, new SelectListItem { Text = "6", Value = "6" }, new SelectListItem
+{ Text = "7", Value = "7" }, new SelectListItem { Text = "8", Value = "8" }, new SelectListItem { Text = "9", Value = "9" },
+new SelectListItem { Text = "10", Value = "10" } })
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Add Loan</button>
+                    </form>
+                    <b id="h"> @ViewData["status"]</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    </di

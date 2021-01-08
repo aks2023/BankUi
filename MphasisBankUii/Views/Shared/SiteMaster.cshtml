@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<header>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>    
+    <img src="~/Images/11a.png" />
+    
+</header>
+
+
+
+<nav>
+
+    @Html.ActionLink("Open Acount", "AccountOpen", new { }, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("Close Acount", "Closing", new { }, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("View Transactions", "Transaction", new { }, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("Deposit/Withdraw", "DepWi", new { }, new { @class = "btn btn-primary btn-lg" })
+    @Html.ActionLink("Logout", "Logout", new { }, new { @class = "btn btn-primary btn-lg" })
+
+
+
+</nav>
+
+
+<body>
+   
+    <div>
+        @RenderBody()
+    </div>
+</body>
+
+</html>

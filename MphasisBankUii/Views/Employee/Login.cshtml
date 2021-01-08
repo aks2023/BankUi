@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<header>
+    <img src="~/Images/MBU.png" />
+
+    
+</header>
+<body>
+    <div>
+        
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+
+
+        <div id="h">
+            <h1 style="font-weight:bold">Login Page</h1>
+        </div>
+
+
+        <div class="container h-80">
+            <div class="row align-items-center h-100">
+                <div class="col-3 mx-auto">
+                    <div class="text-center">
+                        <img id="profile-img" class="rounded-circle profile-img-card" src="https://i.imgur.com/6b6psnA.png" />
+                        <p id="profile-name" class="profile-name-card"></p>
+                        <div>
+                            <form method="post">
+                                <input type="text" name="uname" class="form-control form-group" placeholder="username" required autofocus>
+                                <input type="password" name="password" class="form-control form-group" placeholder="password" required autofocus>
+
+                                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">login</button>
+                            </form>
+                            <b id="h"> @ViewData["a"]</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+

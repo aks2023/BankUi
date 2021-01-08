@@ -1,0 +1,51 @@
+﻿@model IEnumerable<BEntity.CustomerEntity>
+@{
+    ViewBag.Title = "CustomerByid";
+    Layout = "~/Views/Shared/CustomerMasterPage.cshtml";
+}
+
+
+<div id="h">
+    <h1 style="font-weight:bold">Customer Info</h1>
+</div>
+<div id="h">
+    @foreach (var item in Model)
+    {
+        <table style=" border:8px ridge white;">
+            <tr>
+                <td> <label> CustomerID - </label></td>
+                <td> @item.CustId</td>
+            </tr>
+            <tr>
+                <td><label> Account id - </label></td>
+                <td> @item.CustName </td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Date - </label></td>
+                <td>@item.Pwd</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Type - </label></td>
+                <td>@item.Dob</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Amount - </label></td>
+                <td>@item.Pan</td>
+            </tr>
+
+        </table>
+    }
+    <table>
+        <tr></tr>
+        <tr>
+            <td>
+                @Html.ActionLink("Pay Emi", "Payemi", new { }, new { @class = "btn btn-primary btn-lg" })
+            </td>
+        </tr>
+    </table>
+
+
+
+
+</div>
+

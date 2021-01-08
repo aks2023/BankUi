@@ -1,0 +1,43 @@
+﻿@model BEntity.SavingsTransactionEntity
+@{
+    ViewBag.Title = "WithdrawalAmount";
+   
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
+}
+
+
+
+
+
+<div id="h">
+    <h1 style="font-weight:bold">Withdrawal Page</h1>
+
+
+
+    <div class="container h-80">
+        <div class="row align-items-center h-100">
+            <div class="col-3 mx-auto">
+                <div class="text-center">
+                    <p id="profile-name" class="profile-name-card"></p>
+                    <div id="h">
+                        <form method="post">
+                            <input type="text" name="AccountId" id="uname" class="form-control form-group" placeholder="Enter AccountId" required autofocus>
+                            <input type="text" name="Amount" id="uname" class="form-control form-group" placeholder="Enter Amount" required autofocus>
+                            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Withdraw</button>
+                        </form>
+                        <b> @ViewData["status"]  </b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

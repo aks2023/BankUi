@@ -1,0 +1,47 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@model IPagedList<BEntity.LoanTransactionEntity>
+@{
+    ViewBag.Title = "Viewreport";
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+}
+<div id="h">
+    <h1 style="font-weight:bold">Loan Transaction Info</h1>
+</div>
+<div id="h">
+    @foreach (var item in Model)
+    {
+        <table style=" border:8px ridge white;">
+            <tr>
+                <td> <label> Transaction id - </label></td>
+                <td> @item.transactionNo</td>
+
+            </tr>
+            <tr>
+                <td><label> Account id - </label></td>
+                <td> @item.loanAcid</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Date - </label></td>
+                <td>@item.EmiDate</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Type - </label></td>
+                <td>@item.Amount</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Amount - </label></td>
+                <td>@item.Outstanding</td>
+            </tr>
+
+        </table>
+
+    }
+
+    <h2> @Html.PagedListPager(Model, page => Url.Action("Viewreport", new { page }))</h2>
+

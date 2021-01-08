@@ -1,0 +1,57 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+
+@model IPagedList<BEntity.SavingsTransactionEntity>
+@{
+    ViewBag.Title = "TransactionsByid";
+ 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+}
+
+<div id="h">
+    <h1 style="font-weight:bold">Transaction Info</h1>
+</div>
+<div id="h">
+    @foreach (var item in Model)
+    {
+        <table style=" border:8px ridge white;">
+            <tr>
+                <td> <label> Transaction id - </label></td>
+                <td> @item.TransactionId</td>
+               
+            </tr>
+            <tr>
+                <td><label> Account id - </label></td>
+                <td> @item.AccountId </td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Date - </label></td>
+                <td>@item.TransactionDate</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Type - </label></td>
+                <td>@item.TransactionType</td>
+            </tr>
+            <tr>
+                <td> <label> Transaction Amount - </label></td>
+                <td>@item.Amount</td>
+            </tr>
+
+        </table>
+
+    }
+
+<h2> @Html.PagedListPager(Model, page => Url.Action("TransactionsByid", new { page }))</h2>
+
+
+    @*<div id="h">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+            of @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("page", new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded }))
+        </div>*@
+
+
+</div>

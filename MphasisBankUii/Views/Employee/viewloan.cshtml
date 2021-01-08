@@ -1,0 +1,33 @@
+﻿@model List<BEntity.LoanAccountEntity>
+@{
+    Layout = null;
+}
+<header>
+    <img src="~/Images/MBU.png" />
+
+
+</header>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link href="~/content/login.css" rel="stylesheet" type="text/css" />
+
+<div id="h">
+    <h1 style="font-weight:bold"> Details Of Loan Account Are As Follows  </h1>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li >  <label> Created Loan Account No :  </label> @item.LoanAcid  </li>
+            <li> <label> Cacluated Emi : </label> @item.Emi </li>
+
+            <li>  <label>  Rate of Interest : </label> @item.LnRoi  </li>
+        }
+    </ul>
+
+</div>
+
+
+

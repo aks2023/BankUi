@@ -1,0 +1,58 @@
+﻿@model BEntity.CustomerEntity
+@{
+    ViewBag.Title = "CustomerRegistration";
+ 
+
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+}
+
+<div id="h">
+    <h1 style="font-weight:bold">CustomerRegistration</h1>
+</div>
+
+
+
+
+
+<div id="h">
+    <form method="post">
+        <table>
+            <tr>
+                </br>
+                <td><label> Enter customer Name </label></td>
+                <td>@Html.TextBoxFor(s => s.CustName) </td>
+                <td> @Html.ValidationMessageFor(s => s.CustName) </td>
+            </tr>
+            </br>
+            <tr>
+
+                <td> Enter Password </td>
+                <td> @Html.PasswordFor(s => s.Pwd)</td>
+                <td> @Html.ValidationMessageFor(s => s.Pwd) </td>
+            </tr>
+            <tr>
+                <td> Enter DateofBirth </td>
+                <td>@Html.TextBoxFor(s => s.Dob, new { @type = "date", @class = "form-control" })</td>
+            </tr>
+            <tr>
+                <td> Enter Pan number  </td>
+                <td> @Html.TextBoxFor(s => s.Pan)</td>
+                <td> @Html.ValidationMessageFor(s => s.Pan) </td>
+            </tr>
+            <tr>
+                <td><label>Enter Initial Deposit</label></td>
+                <td><input type="text" name="balance"</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button></td>
+            </tr>
+        </table>
+    </form>
+    @ViewData["status"]
+</div>

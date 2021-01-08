@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6f4da1bf6228478c88ba9b44d88f0338" Name="Diagram1">
+        <EntityTypeShape EntityType="MphasisBankModel.Customer" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MphasisBankModel.Employee" Width="1.5" PointX="0.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MphasisBankModel.SavingsAccount" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MphasisBankModel.SavingsTransaction" Width="1.5" PointX="6.25" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="MphasisBankModel.FK__SavingsAc__CustI__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="MphasisBankModel.FK__SavingsTr__Accou__1CBC4616" ManuallyRouted="true" >
+          <ConnectorPoint PointX="3.125" PointY="1.8145687806372548" />
+          <ConnectorPoint PointX="2.9583333333333335" PointY="1.8145687806372541" />
+          <ConnectorPoint PointX="2.7916666666666665" PointY="1.8145687806372548" />
+          <ConnectorPoint PointX="2.75" PointY="1.8145687806372548" />
+          <ConnectorPoint PointX="2.75" PointY="0.125" />
+          <ConnectorPoint PointX="7" PointY="0.125" />
+          <ConnectorPoint PointX="7" PointY="0.5" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="MphasisBankModel.LoanAccount" Width="1.5" PointX="2.75" PointY="4.5" />
+        <EntityTypeShape EntityType="MphasisBankModel.LoanTransaction" Width="1.5" PointX="5" PointY="4.75" />
+        <AssociationConnector Association="MphasisBankModel.FK__LoanAccou__Custi__690797E6" />
+        <AssociationConnector Association="MphasisBankModel.FK__LoanTrans__loanA__6BE40491" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
